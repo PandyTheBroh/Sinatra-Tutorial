@@ -1,29 +1,22 @@
 # myapp.rb
-require 'sinatra'
+require "sinatra"
+require 'sinatra/reloader'
+
 configure do
   set :bind, "0.0.0.0"
+  configure { set :server, :puma }
 end
+
+require 'sinatra'
 
 get '/' do
-  'Hello world!'
+  erb :index
 end
 
-post '/' do
-  'Hello world! since a POST'
+get '/about' do
+  erb :about
 end
 
-put '/' do
-  'Hello world! since a PUT'
-end
-
-delete '/' do
-  'Hello world! since a DELETE'
-end
-
-patch '/' do
-  'Hello world! since a PATCH'
-end
-
-options '/' do
-  'Hello world! since a OPTIONS'
+get '/contact' do
+  erb :contact
 end
