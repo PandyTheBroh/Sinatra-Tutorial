@@ -1,0 +1,43 @@
+<% title="External views in Sinatra" %>
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+      #style {
+        padding-top: 23px;
+        padding-bottom: 24px;
+        padding-right: 51px;
+        padding-left: 55px;
+      }
+    </style>
+  </head>
+
+  <body id="style">
+    <header>
+      <h1><%= title %></h1>
+
+      <nav>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Index</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+
+    </header>
+
+    <section><%= yield %></section>
+
+  </body>
+</html>
