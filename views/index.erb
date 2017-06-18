@@ -1,1 +1,10 @@
-<p>Welcome to this web. A test to know how works the external views in Sinatra</p>
+<p>Welcome to this web. A test to know how work with Sinatra creating a songs database.</p>
+
+<h2><%= @title %></h2>
+<% @songs.each do |song| %>
+  <article>
+    <p> Title: <%= song.title %> </p>
+    <p> Duration: <%= song.duration %> </p>
+    <p> Release Date: <%= song.release_date %> </p>
+  </article>
+<% end %>

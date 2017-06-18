@@ -1,0 +1,15 @@
+<form action="/new_song" method="post">
+  Title: <p><input type="text" name="title"></p>
+  Duration: <p><input type="text" name="duration" placeholder="mm:ss"></p>
+  Release Date: <p><input type="date" name="release_date"></p>
+  <input type="submit" name="submit">
+</form>
+
+<h2><%= @title %></h2>
+<% @songs.each do |song| %>
+  <article>
+    <p> Title: <%= song.title %> </p>
+    <p> Duration: <%= song.duration %> </p>
+    <p> Release Date: <%= song.release_date %> </p>
+  </article>
+<% end %>
